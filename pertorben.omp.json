@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "lightMagenta",
+          "foreground": "#ffffff",
+          "leading_diamond": "<transparent,lightMagenta>\ue0b0</>",
+          "template": "{{ .HostName }}",
+          "type": "session",
+          "trailing_diamond": "\ue0b0",
+          "style": "diamond"
+        },
+        {
+          "background": "lightYellow",
+          "foreground": "#3f3f3f",
+          "leading_diamond": "<transparent,lightYellow>\ue0b0</>",
+          "properties": {
+            "style": "full"
+          },
+          "style": "diamond",
+          "template": " {{ .Path }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "path"
+        },
+        {
+          "background": "lightGreen",
+          "foreground": "#ffffff",
+          "leading_diamond": "<transparent,lightGreen>\ue0b0</>",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "time"
+        },
+        {
+          "background": "#26BDBB",
+          "foreground": "#0C212F",
+          "leading_diamond": "<transparent,#26BDBB>\ue0b0</>",
+          "properties": {
+            "style": "dallas",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " {{ .FormattedMs }}s ",
+          "trailing_diamond": "\ue0b0",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
